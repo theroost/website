@@ -1,0 +1,92 @@
+/* all app scss styles here */
+@font-face {
+    font-family: 'bebasregular';
+    src: url('/fonts/BEBAS___-webfont.eot');
+    src: url('/fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/BEBAS___-webfont.woff') format('woff'),
+         url('/fonts/BEBAS___-webfont.ttf') format('truetype'),
+         url('/fonts/BEBAS___-webfont.svg#bebasregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	border-top: 3px $primary-color solid;
+        background-color:#f0f0f0;
+}
+
+#logo {
+  @include grid-column(
+	   $columns:4,
+	    $last-column:true,
+	    $center:true
+  );
+  margin-top:3rem;
+  margin-bottom:1.5rem;
+  object {
+	  width:100%;
+	}
+}
+
+#mission {
+	@include panel(
+	);
+	@include grid-column(
+	$columns:6,
+	$last-column:true,
+	$center:true
+  );
+}
+article { 
+	margin-top:3rem;
+	@include panel(
+		$padding:0
+	);
+	div.inner {
+		h2 { 
+			font-family:bebasregular;
+			line-height: $base-line-height !important;
+		}
+
+		@include panel(
+		);
+		@include grid-column(
+		$columns:6,
+		$last-column:true
+	  );
+		padding: 1.5*$column-gutter
+	}
+	a.image {
+		@include grid-column(
+		$collapse:true,
+		$columns:6
+	  );
+	}
+}
+article.right a.image {
+	float:right;
+}
+
+.member-card {
+        @include grid-column(3);
+}
+.card-header {
+	@include panel(
+	);
+	}
+.card-copy {
+	display:none;
+	@include panel(
+	);
+	}
+
+#more-members {
+	@include grid-column(
+	$columns:4,
+	$last-column:true,
+	$push:4
+  );
+}
+
+
